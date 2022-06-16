@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Regístrate en nuestra web 👽 </h1>
+      <hr />
+    </header>
+    <main>
+      <!-- La etiqueta <form> es un elemento de bloque. En su interior puede haber cualquier elemento típico de una página web 
+          (párrafos, imágenes, divisiones, listas, tablas, etc.), además de las etiquetas que crean los controles.
+          Los etiquetas que crean los controles en los formularios son <input>, <button>, <select>, <optgroup>, <option> y <textarea>
+         Además, se pueden estructurar los controles con las etiquetas <fieldset> y <legend>. Por último, la etiqueta <label> permite mejorar
+         la accesibilidad de los controles.
+         El navegador envía únicamente los datos de los controles contenidos en el formulario.
+          En una misma página puede haber varios formularios que envíen datos al mismo o a diferentes agentes. -->
+
+      <!-- El atributo type
+            El atributo type de la etiqueta <input> indica el tipo de control de que se trata. -->
+
+      <!-- El atributo value
+            El atributo value permite establecer el valor inicial de un control, aunque cada control lo utiliza de una 
+            forma ligeramente distinta y algunos controles no lo admiten (área de texto, archivo o imagen).
+            
+            En algunos casos (botones) el valor se muestra al usuario y el usuario no puede modificarlo. 
+            En otros casos (cajas de texto, contraseña) el valor se muestra en la página y el usuario puede modificarlo. 
+            En otros casos (casillas de verificación, botones radio, opciones de menú, oculto) el valor no se muestra en la página y 
+            el usuario no puede modificarlo.     -->
+
+      <!-- El atributo required
+              El atributo required permite indicar qué controles es obligatorio rellenar para enviar el formulario. -->
+
+      <!-- El atributo placeholder
+               El atributo placeholder permite mostrar en los controles de texto un texto que desaparece al escribir en el control. -->
+
+      <!-- El atributo size
+                El atributo size permite establecer la longitud de los controles de texto 
+                (text, password, search, etc.). Por omisión, las cajas suelen tener 20 caracteres de longitud. -->
+
+      <!-- Los atributos maxlength y minlength
+                Los atributos maxlength y minlength permiten establecer la longitud máxima y mínima, respectivamente, que puede escribir el usuario 
+                en un control de texto (text, password, search, etc.). -->
+
+      <!-- En HTML 5 se añadieron los controles: botón general <input type="button">, número <input type="number">, 
+                búsqueda <input type="search">, teléfono <input type="tel">, dirección web <input type="url">,
+                 dirección de correo <input type="email">, fecha <input type="date">, hora <input type="time">, color <input type="color">, 
+                 rango <input type="range">, opciones <option> (para <datalist>), lista de valores <datalist>, salida <output>, barra de progreso <progress> 
+                     y medidor <meter>. Mes <input type="month">, semana <input type="week"> y fecha y hora local <input type="datetime-local">. -->
+      <form action="">
+        <p>
+          <label for="nombre">
+            <b>¿Cuál es tu nombre?</b>
+            <input type="text" id="nombre" name="nombre" required />
+          </label>
+          <label for="email">
+            <b>¿Cuál es tu correo?</b>
+            <input type="email" id="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label for="pais">
+            <b>¿De qué pais eres?</b>
+            <input type="text" id="pais" name="pais" />
+          </label>
+        </p>
+        <p>
+          <label for="cp">
+            <b>Código postal</b>
+            <input type="text" id="cp" name="cp" />
+          </label>
+        </p>
+        <p>
+          <label for="curso">
+            <b>¿Qué curso quieres hacer?</b>
+            <input list="cursos" placeholder="Elige tu curso" />
+            <datalist id="cursos">
+              <option value="Javascript"></option>
+              <option value="Python"></option>
+              <option value="HTML"></option>
+              <option value="CSS"></option>
+            </datalist>
+          </label>
+        </p>
+        <p>
+          <label>
+            <b>¿Qué modalidad te gusta?</b>
+            <input
+              type="radio"
+              id="remoto"
+              name="modalidad"
+              value="remoto"
+              checked
+            /><b>Remoto</b>
+            <input type="radio" id="site" name="modalidad" value="site" /><b
+              >In Site</b
+            >
+          </label>
+        </p>
+        <p>Terminos y condiciones</p>
+        <p>
+          <textarea name="termino" id="termino" cols="50" rows="10" readonly>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, temporibus reiciendis. Repellat nobis ut, ullam voluptas laudantium nesciunt hic magni libero quos, fugit placeat explicabo facilis, fuga labore quia impedit quaerat aliquam corporis quis repellendus! Ipsam magni fuga, natus quisquam laboriosam, expedita tenetur ratione ex dolore inventore tempora exercitationem ad explicabo magnam reiciendis, tempore eligendi. Adipisci corrupti aliquid laudantium iste repellendus eos laborum sit? Accusamus voluptates delectus aperiam dolorem assumenda quia similique vero, non officiis reiciendis. Nobis animi dolores asperiores cumque cum quisquam ratione quasi laudantium consequatur autem accusamus, itaque mollitia, rerum facere, ab inventore sit delectus necessitatibus aperiam deleniti?
+                </textarea
+          >
+        </p>
+        <p>
+          <label for="acepto">
+            <input type="checkbox" id="acepto" name="acepto" required />
+            <b>Acepto los términos y condiciones</b>
+          </label>
+        </p>
+        <!-- <input type="submit"> -->
+        <button>Enviar formulario</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

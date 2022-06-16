@@ -1,0 +1,88 @@
+.miclase {
+  background-color: aquamarine;
+
+  padding: 15px;
+}
+
+.miclase::after {
+  content: "Contenido insertado con CSS";
+
+  display: block;
+}
+
+.miclase::before {
+  content: "Contenido insertado antes…";
+} /* inserta contenido desde css */
+
+div:first-line {
+  color: red;
+} /*pone en color rojo la primera linea del párrafo*/
+
+p:first-letter {
+  text-transform: uppercase;
+} /*pasa a mayúsculas la primera letra de cada párrafo*/
+
+/*Especifidad en los elementos*/
+
+a[href^="http://www.riverplate.com"]
+{
+  color: red;
+} /*pone en color rojo los enlaces que empiecen por http://*/
+
+
+
+/*Unidades de medidas*/
+
+/* Medidas absolutas:
+Su valor se encuentra definido en términos concretos y de manera medible.
+ Esto quiere decir que no depende de otro valor de referencia, ni del contexto.
+ Por ejemplo el Pixel */
+
+/* Unidades relativas
+Las unidades relativas no son valores exactos sino que se calculan a partir de otro
+ valor de referencia. A pesar de parecer más difíciles de calcular son las más utilizadas
+  en el diseño de sitios web responsive por su adaptabilidad a los diferentes dispositivos. */
+
+
+/* Em */
+/* Esta unidad cambia a los elementos hijos de acuerdo con el tamaño de fuente (font-size) */
+/* la div más interna (id = hijo), 1em será igual a 16px, siguiendo la lógica, 2em será igual 
+a 32px y así sucesivamente. ¡También podemos poner valores como 1.5! En nuestro caso, 1.5em será
+ igual a 24px. Al expresar tamaños como margin y padding utilizando em, esto significa que estarán
+  relacionados con el tamaño de fuente del elemento padre. */
+#div {
+  font-size: 16px;
+}
+
+#hijo {
+  font-size: 2em; /*2em será igual a 32px*/
+}
+
+
+/* REM */
+/* El REM viene como sucesor del EM y ambos comparten la misma lógica operativa (font-size), 
+pero la forma de implementación es diferente. Mientras que el em está directamente relacionado 
+con el tamaño de fuente del elemento padre, el rem está relacionado con el tamaño de fuente del elemento root (raíz), en este caso, la tag.
+si definimos que el font-size de este elemento será de 18 px, por lo que 1rem = 18px, 2rem = 36px y así sucesivamente
+Por lo general, los navegadores especifican el tamaño de fuente predeterminado para el elemento root (raíz), 16px
+
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem
+18px = 1.125rem
+
+html{
+    font-size: 62,5%;
+}
+
+h1{
+    font-size: 1.2rem;  equivalente a 12px
+}
+
+p{
+    font-size: 2.4rem; equivalente a 24px
+}
+¡el valor de píxel siempre será el valor definido en rem por 10! Se vuelve más conveniente,
+*/
+

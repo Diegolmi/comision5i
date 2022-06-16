@@ -1,0 +1,67 @@
+/* un elemento para que este posicionado tiene que tener un position diferente a Static */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  background-color: #000000;
+   height: 200vh; 
+}
+
+div {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.261);
+  border-radius: 5px;
+}
+
+.parent {
+  background-color: gray;
+  /* position: relative; */
+}
+.static {
+  position: static;
+  background-color: rgb(216, 208, 96);
+  height: 100px;
+}
+.relative {
+    /* no se mueve de su posicion original */
+    /* su espacion queda reservado, no afecta a los otros elementos. pero si me permite moverlo */
+  position: relative;
+  background-color: red;
+  height: 100px;
+  top: 10px; /* el top tiene mayor importancia que el bottom */
+  right: 20px;
+  left: 10px; /*cuando tienen left es de mayor importancia que el right*/
+}
+.absolute {
+  /* con esta propiedad hacemos que vuele el elemento pero no se reserva una posicion. Esta puede ser usada por cualquier otro elemento */
+  /* SE POSICIONE EN RELACION AL PRIMER PADRE QUE TIENE CON POSICIONAMIENTO RELATIV*/
+  position: absolute;
+  background-color: #a8d5e2;
+  /* top: 10px;
+   height: 100px;
+   right: 10px; */
+}
+.fixed {
+  /* Igual que lo que pasa con el Absolute */
+  /* lo que cambia es que este lo vamos a posicionar con relacion a Viewport */
+  position: fixed;
+  background-color: rgb(255, 0, 221);
+  top:50%;
+  height: 100px;
+}
+/* .scroll {
+    overflow: scroll;
+    border: 2px solid salmon;
+    height: 250px;
+} */
+.sticky {
+    /* se queda fijo siempre que este adentro de su contenedor*/
+    /*Toma como referencia el ancestro que tenga un desplazamiento. Por lo general el body*/
+    position: sticky;
+  background-color: green;
+  height: 100px;
+  top: 0;
+}

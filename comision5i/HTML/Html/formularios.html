@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <section>
+      <form class="form">
+        <label> Nombre: </label>
+        <input
+          type="text"
+          maxlength="10"
+          required
+          minlength="3"
+          name="nombre"
+          id="nombre"
+          placeholder="Juan de los palotes"
+        />
+        <label> Apellido: </label>
+        <input
+          type="text"
+          required
+          name="apellido"
+          id="apellido"
+          placeholder="Pérez"
+        />
+        <br />
+        <br />
+        <label> Edad: </label>
+        <input
+          type="number"
+         
+          name="edad"
+          id="edad"
+          placeholder="18"
+        />
+        <br />
+        <label for=""> Email</label>
+        <input
+          type="email"
+          required
+          name="email"
+          id="email"
+          placeholder="diego@gmail.com"
+        />
+        <br />
+        <label for=""> Contraseña</label>
+        <input
+          type="password"
+          required
+          name="contraseña"
+          id="contraseña"
+          placeholder="********"
+        />
+        <br />
+        <label> subi tu cv</label>
+        <input type="file" name="cv" id="cv" /> <br />
+        <label for=""> Genero :</label>
+        <input type="radio" name="genero" id="genero" value="masculino" />
+        <label for="">Masculino</label>
+        <input type="radio" checked  name="genero" id="genero" value="femenino" />
+        <label for="">Femenino</label>
+        <br />
+        <label for="">Paises</label>
+        <select name="pais" id="pais">
+          <option  value="">Seleccione un pais</option>
+          <option value="argentina">Argentina</option>
+          <option value="mexico">Mexico</option>
+          <option value="colombia">Colombia</option>
+          <option value="peru">Peru</option>
+          <option value="venezuela">Venezuela</option>
+        </select>
+        <br />
+        <label for="">Selecciona un rango</label>
+        <input type="range" name="rango" id="rango" />
+        <input type="color" name="" id=""> <br>
+        <label for=""> Pone tus comentarios</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+
+        <button type="submit" >Enviar Comentario</button>
+     
+        
+
+      </form>
+    </section>
+  </body>
+</html>
